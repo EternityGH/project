@@ -19,8 +19,7 @@
     if( isset($_POST['submit']) ){
         $name = $_POST['name'];
         $email = $_POST['email'];
-        $pass = $_POST['pass'];
-        $rpass = $_POST['rpass'];
+        $pass = md5($_POST['pass']);
         $phone = $_POST['phone'];
         $address = $_POST['address'];
         $gender = $_POST['gender'];
@@ -68,9 +67,9 @@
                         <input class="input pass" name="phone" type="number" placeholder="Your phone number" />
                         <input class="input pass" name="address" type="text" placeholder="Your address" />
                         <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" class="custom-control-input" id="customRadio1" name="example1">
+                        <input type="radio" class="custom-control-input" id="customRadio1" name="gender">
                         <label class="custom-control-label" for="customRadio1">Male</label>
-                        <input type="radio" class="custom-control-input" id="customRadio1" name="example1">
+                        <input type="radio" class="custom-control-input" id="customRadio1" name="gender">
                         <label class="custom-control-label" for="customRadio1">Female</label>
                       </div>
                         <input class="input pass" type="date" name="dob">
